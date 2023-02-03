@@ -26,12 +26,12 @@ const Input = ({ toDo, setToDo, updateData, setUpdateData }) => {
 
   const showAlert = () => {
     if (newList) {
-      alert(inputText.current.value);
+      alert(inputText.current.value + ' ကိုထည့်မယ်');
       let newEntry1 = { id: Date.now(), title: newList, status: false };
       setToDo([...toDo, newEntry1]);
       setNewList("");
     } else {
-      alert("Enter");
+      alert("အကြောင်းရာထည့်ပါ။");
     }
   };
 
