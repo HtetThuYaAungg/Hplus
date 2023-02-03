@@ -4,7 +4,9 @@ const Input = ({ toDo, setToDo, updateData, setUpdateData }) => {
   const inputText = useRef();
   const [newList, setNewList] = useState("");
 
-  const cancelUpdate = () => {};
+  const cancelUpdate = () => {
+    setUpdateData("");
+  };
 
   const changeTodo = (e) => {
     let newEntry = {
@@ -54,7 +56,7 @@ const Input = ({ toDo, setToDo, updateData, setUpdateData }) => {
               ပြင်မယ်
             </button>
             &nbsp;
-            <button type="button" className="btn  btn-warning">
+            <button type="button" className="btn  btn-warning" onClick={cancelUpdate}>
               မပြင်တော့ဘူး
             </button>
           </div>
