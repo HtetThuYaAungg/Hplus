@@ -10,7 +10,7 @@ const Todo = () => {
 
   const deleteTodo = (id) => {
     console.log(id);
-    if (confirm("Are U sure to delete?")) {
+    if (confirm("ဖျက်မှာသေချာပြီလား")) {
       setToDo(toDo.filter((todo) => todo.id != id));
     }
   };
