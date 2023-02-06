@@ -6,7 +6,7 @@ import apiRequest from "./apiRequest";
 
 const Todo = () => {
 
-  const API_URL = 'http://localhost:3500/lists';
+  const API_URL = 'https://todolistapi-uqlz.onrender.com/lists';
   const [toDo, setToDo] = useState([]);
 
   const [updateData, setUpdateData] = useState("");
