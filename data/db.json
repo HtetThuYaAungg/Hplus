@@ -1,0 +1,29 @@
+{
+  "lists": [
+    {
+      "id": 2,
+      "title": "list 1",
+      "status": true
+    },
+    {
+      "id": 3,
+      "title": "list 1",
+      "status": true
+    },
+    {
+      "id": 4,
+      "title": "list two12",
+      "status": false
+    },
+    {
+      "id": 1675668867509,
+      "title": "gg",
+      "status": false
+    },
+    {
+      "id": 1675673725088,
+      "title": "list 5",
+      "status": false
+    }
+  ]
+}

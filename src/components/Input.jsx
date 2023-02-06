@@ -1,39 +1,12 @@
-import React, { useImperativeHandle, useRef, useState } from "react";
+import React from "react";
 
-const Input = ({ toDo, setToDo, updateData, setUpdateData }) => {
-  const inputText = useRef();
-  const [newList, setNewList] = useState("");
-
-  const cancelUpdate = () => {
-    setUpdateData("");
-  };
-
-  const changeTodo = (e) => {
-    let newEntry = {
-      id: updateData.id,
-      title: e.target.value,
-      status: updateData.status ? true : false,
-    };
-    setUpdateData(newEntry);
-  };
-
-  const updateTodo = () => {
-    let filter = [...toDo].filter((todo) => todo.id !== updateData.id);
-    let update = [updateData, ...filter];
-    setToDo(update);
-    setUpdateData("");
-  };
-
-  const showAlert = () => {
-    if (newList) {
-      alert(inputText.current.value + ' ကိုထည့်မယ်');
-      let newEntry1 = { id: Date.now(), title: newList, status: false };
-      setToDo([...toDo, newEntry1]);
-      setNewList("");
-    } else {
-      alert("အကြောင်းရာထည့်ပါ။");
-    }
-  };
+const Input = ({ inputText,
+                updateData,
+                showAlert, 
+                newList, 
+                setNewList, 
+                cancelUpdate, changeTodo, updateTodo }) => {
+ 
 
   return (
     <>
@@ -51,7 +24,7 @@ const Input = ({ toDo, setToDo, updateData, setUpdateData }) => {
             <button
               type="button"
               className="btn  btn-success"
-              onClick={updateTodo}
+              onClick={()=>updateTodo(updateData.id)}
             >
               ပြင်မယ်
             </button>
